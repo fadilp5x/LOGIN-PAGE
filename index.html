@@ -1,0 +1,46 @@
+!DOCTYPE=HTML
+<html>
+<style>
+.login_div {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.row {
+  padding: 10px;
+}
+.row.submit {
+  text-align: right;
+}
+</style>
+<head>
+  <title>Login Form</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', filename='login.css') }}">
+</head>
+
+<body>
+  <div class="login_div">
+    <form action="" method="post" class="login_form">
+      <div class="row">
+        <label>Username:
+        <input type="text" name="username" value="{{request.form.username}}">
+      </label>
+      </div>
+      <div class="row">
+        <label> Password:
+        <input type="password" name="password" value="{{request.form.password }}">
+      </label>
+      </div>
+      <div class="row submit">
+      <input class="btn btn-default" type="submit" value="Login">
+      </div>
+    </form>
+  </div>
+
+
+</body>
+<html>
+
